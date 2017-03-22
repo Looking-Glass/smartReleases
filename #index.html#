@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="github.js"></script>
+<script type="text/javascript">
+  $(function(){
+  updateProjects();
+  });
+</script>
+
+<!-- you gotta have style -->
+<style>
+div {
+    border-radius: 25px;
+    background: #73AD21;
+    margin: 20 auto 20 auto;
+    padding: 20px; 
+    width: 400px;
+    text-align:  center;
+
+}
+</style>
+</head>
+<body>
+
+<div class="project" url="https://github.com/Looking-Glass/smartReleases/">
+Smart Releases!</br>
+<a href="" id="mac">Mac Executable download</a><br/>
+<a href="" id="win">Windows Executable download</a><br/>
+<a href="" id="src">Source Download</a><br/>
+</div>
+
+<div class="project" url="https://github.com/Looking-Glass/Valley-Racer-1.1/">
+Valley Racer</br>
+<a href="" id="mac">Mac Executable download</a><br/>
+<a href="" id="win">Windows Executable download</a><br/>
+<a href="" id="src">Source Download</a><br/>
+</div>
+
+<div class="project" url="https://github.com/Looking-Glass/dicomViewer/">
+DICOM viewer</br>
+<a href="" id="mac">Mac Executable download</a><br/>
+<a href="" id="win">Windows Executable download</a><br/>
+<a href="" id="src">Source Download</a><br/>
+</div>
+
+</body>
+</html>
