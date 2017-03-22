@@ -1,0 +1,25 @@
+function getReleases(url) {
+    var apiUrl=url.replace("https://github.com/", "https://api.github.com/repos/");
+    apiUrl+="releases/latest";
+    console.log(apiUrl);
+    $.getJSON(apiUrl).done(function (release) {
+	    console.log(release);
+	    var macUrl=null;
+	    var winUrl=null;
+	    for(var i=0;i<release.assets.length;i++)
+		{
+		    if(release.assets[i].name.match(/mac/i))
+			macUrl=release.assets[i].browser_download_url;
+		    if(release.assets[i].name.match(/win/i))
+			winUrl=release.assets[i].browser_download_url;
+		}
+	    
+	    //if we didn't find a suitable URL, just link to the latest release page
+	    if(!macUrl)
+		macUrl=release.html_url;
+	    if(!winUrl)
+		winUrl=release.html_url;
+	    console.log(macUrl);
+	    console.log(winUrl);
+        });
+}
